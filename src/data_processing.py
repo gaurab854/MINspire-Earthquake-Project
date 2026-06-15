@@ -1,10 +1,18 @@
 import os
-import pandas as pd
-import numpy as np
-import logging
+import io
 import shutil
+import pandas as pd
+import logging
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+# Load .env from project root (gitignored) - works regardless of where this file is run from
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(_PROJECT_ROOT, '.env'))
+except ImportError:
+    pass  # dotenv not installed; user must set KAGGLE_DATASET_ID manually
 
 def get_data_path(data_dir):
     """Finds the first CSV file in the data directory. If not found, downloads it via kagglehub."""
@@ -19,8 +27,10 @@ def get_data_path(data_dir):
     logging.info("Local dataset not found. Downloading via kagglehub...")
     try:
         import kagglehub
-        from dotenv import load_dotenv
-        load_dotenv()  # Load from .env if present (gitignored)
+    except ImportError:
+        raise ImportError("kagglehub is not installed. Run: pip install kagglehub")
+    
+    try:
         dataset_id = os.environ.get("KAGGLE_DATASET_ID")
         if not dataset_id:
             raise ValueError("KAGGLE_DATASET_ID not set. Add it to your .env file (see .env.example).")

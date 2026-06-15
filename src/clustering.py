@@ -1,14 +1,22 @@
 import os
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.cluster import DBSCAN, KMeans
-from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import silhouette_score
 import logging
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
+
+try:
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+except ImportError:
+    raise ImportError("matplotlib/seaborn not installed. Run: pip install matplotlib seaborn")
+
+try:
+    from sklearn.cluster import DBSCAN, KMeans
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.metrics import silhouette_score
+except ImportError:
+    raise ImportError("scikit-learn not installed. Run: pip install scikit-learn")
+
 
 def detect_hotspots(df, output_dir):
     """Phase 6: Seismic Hotspot Detection"""
