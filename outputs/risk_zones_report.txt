@@ -1,0 +1,15 @@
+=== Risk Zone Identification ===
+
+Methodology:
+- High Risk: High earthquake frequency (top 25% of clusters) OR history of strong earthquakes (Max Mag >= 6.0).
+- Moderate Risk: Moderate frequency (above median) OR moderate average magnitude (Avg Mag >= 4.5).
+- Low Risk: Clusters that do not meet the above criteria.
+
+Risk Zone Breakdown:
+   DBSCAN_Cluster  Earthquake_Count  Average_Magnitude  Max_Magnitude  Average_Depth Risk_Level
+0               0              1004           4.437410            7.8      20.676682  High Risk
+1               1               212           4.154717            6.7      17.315094  High Risk
+2               2                29           4.410345            5.1      26.695862   Low Risk
+3               3               200           4.344000            5.9      28.514930   Low Risk
+4               4                 9           4.222222            4.6      32.622222   Low Risk
+

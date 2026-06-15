@@ -1,0 +1,21 @@
+=== Statistical Analysis Summary ===
+
+1. Statistics by Decade:
+       Magnitude             Depth
+            mean  max count   mean
+Decade                            
+1990        4.40  6.2   280  34.07
+2000        4.19  6.7   443  25.47
+2010        4.46  7.8   549  16.17
+2020        4.46  7.1   264  14.02
+
+2. Average Earthquakes per Year: 42.67
+
+3. Correlation Matrix:
+           Magnitude     Depth  Latitude  Longitude      Year
+Magnitude   1.000000 -0.051914 -0.137263   0.032688  0.083343
+Depth      -0.051914  1.000000  0.101067   0.051536 -0.486764
+Latitude   -0.137263  0.101067  1.000000  -0.320521 -0.301876
+Longitude   0.032688  0.051536 -0.320521   1.000000  0.023342
+Year        0.083343 -0.486764 -0.301876   0.023342  1.000000
+

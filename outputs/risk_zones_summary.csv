@@ -1,0 +1,6 @@
+DBSCAN_Cluster,Event_Count,Avg_Magnitude,Max_Magnitude,Avg_Depth,Avg_Lat,Avg_Lon,Risk_Level
+0,1004,4.44,7.8,20.68,28.42,85.02,High Risk
+1,212,4.15,6.7,17.32,30.59,83.44,High Risk
+2,29,4.41,5.1,26.7,30.75,86.36,Low Risk
+3,200,4.34,5.9,28.51,30.09,87.99,Low Risk
+4,9,4.22,4.6,32.62,30.11,86.31,Low Risk

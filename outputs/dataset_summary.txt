@@ -1,0 +1,84 @@
+=== Dataset Inspection Report ===
+
+1. Dataset Shape: (1536, 22)
+
+2. Head (First 5 Rows):
+                       time  latitude  longitude   depth  mag magType   nst    gap   dmin   rms net          id                   updated                       place        type  horizontalError  depthError  magError  magNst    status locationSource magSource
+0  2025-12-07T02:43:07.342Z   29.8698    80.9384  43.404  4.4      mb  21.0  166.0  8.856  0.94  us  us7000rkd1  2025-12-26T01:20:25.040Z  37 km E of Dārchulā, Nepal  earthquake            13.18       9.350     0.144    14.0  reviewed             us        us
+1  2025-12-04T11:59:01.015Z   29.1109    87.0043  10.000  4.1      mb  36.0  168.0  3.646  1.26  us  us7000rfhw  2025-12-27T14:38:45.040Z  130 km N of Lobuche, Nepal  earthquake            10.55       1.930     0.103    26.0  reviewed             us        us
+2  2025-11-10T22:44:15.027Z   29.1757    86.8367  10.000  4.2      mb  14.0  164.0  3.779  0.57  us  us7000refy  2025-12-01T01:43:29.040Z  136 km N of Lobuche, Nepal  earthquake            12.27       1.963     0.199     7.0  reviewed             us        us
+3  2025-11-03T20:57:22.312Z   28.5267    87.3673  10.000  4.7      mb  64.0   79.0  3.493  0.77  us  us6000rl8r  2025-11-23T19:51:34.188Z  84 km NE of Lobuche, Nepal  earthquake             9.64       1.872     0.058    89.0  reviewed             us        us
+4  2025-10-21T14:59:40.611Z   29.0245    85.3683  10.000  4.1      mb  25.0  163.0  5.072  0.44  us  us6000rmt6  2025-11-13T19:11:33.040Z    35 km SSE of Saga, China  earthquake             9.46       1.840     0.103    26.0  reviewed             us        us
+
+3. Info and Data Types:
+<class 'pandas.DataFrame'>
+RangeIndex: 1536 entries, 0 to 1535
+Data columns (total 22 columns):
+ #   Column           Non-Null Count  Dtype  
+---  ------           --------------  -----  
+ 0   time             1536 non-null   str    
+ 1   latitude         1536 non-null   float64
+ 2   longitude        1536 non-null   float64
+ 3   depth            1536 non-null   float64
+ 4   mag              1536 non-null   float64
+ 5   magType          1536 non-null   str    
+ 6   nst              725 non-null    float64
+ 7   gap              1167 non-null   float64
+ 8   dmin             733 non-null    float64
+ 9   rms              1532 non-null   float64
+ 10  net              1536 non-null   str    
+ 11  id               1536 non-null   str    
+ 12  updated          1536 non-null   str    
+ 13  place            1536 non-null   str    
+ 14  type             1536 non-null   str    
+ 15  horizontalError  717 non-null    float64
+ 16  depthError       954 non-null    float64
+ 17  magError         726 non-null    float64
+ 18  magNst           1460 non-null   float64
+ 19  status           1536 non-null   str    
+ 20  locationSource   1536 non-null   str    
+ 21  magSource        1536 non-null   str    
+dtypes: float64(12), str(10)
+memory usage: 264.1 KB
+
+
+4. Summary Statistics (Describe):
+                            time     latitude    longitude        depth          mag magType         nst          gap        dmin          rms   net          id                   updated                     place        type  horizontalError  depthError    magError       magNst    status locationSource magSource
+count                       1536  1536.000000  1536.000000  1536.000000  1536.000000    1536  725.000000  1167.000000  733.000000  1532.000000  1536        1536                      1536                      1536        1536       717.000000  954.000000  726.000000  1460.000000      1536           1536      1536
+unique                      1536          NaN          NaN          NaN          NaN       8         NaN          NaN         NaN          NaN     2        1536                      1368                      1183           1              NaN         NaN         NaN          NaN         1              3         6
+top     2025-12-07T02:43:07.342Z          NaN          NaN          NaN          NaN      mb         NaN          NaN         NaN          NaN    us  us7000rkd1  2015-07-03T00:23:39.040Z  Southern Tibetan Plateau  earthquake              NaN         NaN         NaN          NaN  reviewed             us        us
+freq                           1          NaN          NaN          NaN          NaN    1449         NaN          NaN         NaN          NaN  1535           1                        24                        50        1536              NaN         NaN         NaN          NaN      1536           1532      1481
+mean                         NaN    29.032246    85.235347    21.747895     4.372826     NaN   47.016552   113.657241    2.533517     0.908427   NaN         NaN                       NaN                       NaN         NaN         7.908466    5.333807    0.106114    29.119863       NaN            NaN       NaN
+std                          NaN     1.163598     2.360856    16.395891     0.481884     NaN   54.248199    48.599046    2.155458     0.276937   NaN         NaN                       NaN                       NaN         NaN         2.303690    6.764082    0.050213    40.450971       NaN            NaN       NaN
+min                          NaN    26.001800    80.008000     2.000000     3.000000     NaN    5.000000    10.000000    0.027000     0.060000   NaN         NaN                       NaN                       NaN         NaN         2.400000    0.000000    0.033000     1.000000       NaN            NaN       NaN
+25%                          NaN    27.905275    83.432750    10.000000     4.100000     NaN   16.000000    77.000000    0.805000     0.710000   NaN         NaN                       NaN                       NaN         NaN         6.300000    1.888750    0.072000     4.000000       NaN            NaN       NaN
+50%                          NaN    28.907400    85.810700    10.000000     4.300000     NaN   28.000000   110.000000    1.995000     0.900000   NaN         NaN                       NaN                       NaN         NaN         7.700000    1.900000    0.095000    14.000000       NaN            NaN       NaN
+75%                          NaN    30.106000    87.353350    33.000000     4.600000     NaN   56.000000   152.000000    3.621000     1.100000   NaN         NaN                       NaN                       NaN         NaN         9.370000    6.000000    0.130000    36.000000       NaN            NaN       NaN
+max                          NaN    30.996000    88.999000   143.200000     7.800000     NaN  468.000000   290.500000   22.604000     1.890000   NaN         NaN                       NaN                       NaN         NaN        17.600000   53.700000    0.521000   328.000000       NaN            NaN       NaN
+
+5. Missing Values:
+time                 0
+latitude             0
+longitude            0
+depth                0
+mag                  0
+magType              0
+nst                811
+gap                369
+dmin               803
+rms                  4
+net                  0
+id                   0
+updated              0
+place                0
+type                 0
+horizontalError    819
+depthError         582
+magError           810
+magNst              76
+status               0
+locationSource       0
+magSource            0
+
+6. Duplicate Rows:
+0

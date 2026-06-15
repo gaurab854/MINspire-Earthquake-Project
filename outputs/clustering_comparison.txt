@@ -1,0 +1,6 @@
+=== DBSCAN vs K-Means for Seismic Hotspots ===
+
+DBSCAN is generally better suited for earthquake epicenter clustering because:
+1. It does not require specifying the number of clusters in advance.
+2. It can find arbitrarily shaped clusters (fault lines are often linear/curved, not spherical like K-Means assumes).
+3. It has a notion of 'noise' (cluster -1), which handles scattered, independent seismic events naturally.
