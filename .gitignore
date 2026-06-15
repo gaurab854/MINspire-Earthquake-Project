@@ -19,3 +19,21 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# ===== SECRETS & CREDENTIALS (NEVER COMMIT) =====
+.env
+.env.local
+.env.production
+
+# Kaggle API credentials
+kaggle.json
+.kaggle/
+
+# Any key/secret/token files
+*.key
+*.pem
+*.p12
+*.secret
+*_secret*
+*_credentials*
+*api_key*
