@@ -7,3 +7,4 @@ folium
 geopandas
 plotly
 kagglehub
+python-dotenv

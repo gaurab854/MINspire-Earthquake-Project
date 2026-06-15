@@ -16,10 +16,15 @@ def get_data_path(data_dir):
             return os.path.join(data_dir, csv_files[0])
     
     # If not found, download via kagglehub
-    logging.info("Local dataset not found. Downloading Nepal Earthquake Seismicity Dataset (1990–2026) from Kaggle using kagglehub...")
+    logging.info("Local dataset not found. Downloading via kagglehub...")
     try:
         import kagglehub
-        download_path = kagglehub.dataset_download("amansinghnp/nepal-earthquake-seismicity-dataset-1990-2026")
+        from dotenv import load_dotenv
+        load_dotenv()  # Load from .env if present (gitignored)
+        dataset_id = os.environ.get("KAGGLE_DATASET_ID")
+        if not dataset_id:
+            raise ValueError("KAGGLE_DATASET_ID not set. Add it to your .env file (see .env.example).")
+        download_path = kagglehub.dataset_download(dataset_id)
         logging.info(f"Dataset downloaded to cache path: {download_path}")
         
         # Find all CSV files in the downloaded path
