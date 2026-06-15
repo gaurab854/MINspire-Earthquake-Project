@@ -9,6 +9,7 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
 # Load .env from project root (gitignored) - works regardless of where this file is run from
 _PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 try:
+    # pyrefly: ignore [missing-import]
     from dotenv import load_dotenv
     load_dotenv(os.path.join(_PROJECT_ROOT, '.env'))
 except ImportError:
@@ -26,6 +27,7 @@ def get_data_path(data_dir):
     # If not found, download via kagglehub
     logging.info("Local dataset not found. Downloading via kagglehub...")
     try:
+        # pyrefly: ignore [missing-import]
         import kagglehub
     except ImportError:
         raise ImportError("kagglehub is not installed. Run: pip install kagglehub")
