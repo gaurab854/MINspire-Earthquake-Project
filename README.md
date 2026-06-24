@@ -1,5 +1,7 @@
 # Evolution of Seismic Hotspots in Nepal (1990–2026): A Spatiotemporal Clustering Approach
 
+> ✅ **Pipeline Verified & Run Successfully** — Last executed: 2026-06-24 | All 22 outputs regenerated.
+
 ## Project Overview
 This project builds a comprehensive data analysis and machine learning pipeline to investigate the evolution of earthquake activity in Nepal from 1990 to 2026. The objective is to identify seismic hotspots using clustering algorithms, analyze temporal trends, and generate interpretable risk insights for different regions. 
 
@@ -9,7 +11,7 @@ The goal is not to predict future earthquakes, but to understand historical seis
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/gaurab854/MINspire-Earthquake-Project.git
    cd MINspire-Earthquake-Project
    ```
 
